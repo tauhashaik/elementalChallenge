@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+}
+/*header*/
+
+
+
+.site-header {
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    padding-top:30px;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    transition: 0.3s;
+    z-index: 50;
+}
+#logo{
+    height: 63px;
+    width: 170px;
+    margin-left: 300px; 
+}
+
+.openmenu {
+    display: inline-block;
+    cursor:pointer;
+    width: 30px; /* Width of the burger menu */
+    height: 24px; /* Total height to accommodate three lines */
+    position: relative;
+    margin-left: 630px;
+    margin-bottom: 17px;
+  }
+  
+  .openmenu span {
+    display: block;
+    width: 100%;
+    height: 3px; /* Height of each line */
+    background-color: #333; /* Color of the lines */
+    margin: 4px 0; /* Space between each line */
+    transition: all 0.3s ease;
+  }
+  
+  .openmenu span:nth-child(1) {
+    top: 0;
+  }
+  
+  .openmenu span:nth-child(2) {
+    top: 10px;
+  }
+  
+  .openmenu span:nth-child(3) {
+    top: 20px;
+  }
+  
+
+@media(max-width:1100px) {
+    .site-header,.inner-header{
+        height: 80px;
+    }
+}
+
+/*carousel*/
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+
+.carousel-caption {
+    position: absolute;
+    margin-bottom: 200px;
+    bottom: 20px;
+    /* left: 20px; */
+    color: white;
+    background-color: #124cd2;
+    padding: 15px;
+    /* border-radius: 5px; */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.carousel-control-prev {
+    left: 10px;
+    margin-top: 40px;
+}
+
+.carousel-control-next {
+    right: 10px;
+    margin-top: 32px;
+}

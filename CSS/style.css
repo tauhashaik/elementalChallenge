@@ -1,67 +1,64 @@
 body {
     font-family: Arial, sans-serif;
 }
-/*header*/
 
-
-
+/* Header */
 .site-header {
     height: 80px;
     position: fixed;
     width: 100%;
-    padding-top:30px;
+    padding-top: 30px;
     top: 0;
     left: 0;
     background-color: #fff;
     transition: 0.3s;
     z-index: 50;
 }
-#logo{
+
+#logo {
     height: 63px;
     width: 170px;
-    margin-left: 300px; 
+    margin-left: 350px; 
 }
 
 .openmenu {
     display: inline-block;
-    cursor:pointer;
+    cursor: pointer;
     width: 30px; /* Width of the burger menu */
     height: 24px; /* Total height to accommodate three lines */
     position: relative;
     margin-left: 630px;
     margin-bottom: 17px;
-  }
-  
-  .openmenu span {
+}
+
+.openmenu span {
     display: block;
     width: 100%;
     height: 3px; /* Height of each line */
     background-color: #333; /* Color of the lines */
     margin: 4px 0; /* Space between each line */
     transition: all 0.3s ease;
-  }
-  
-  .openmenu span:nth-child(1) {
-    top: 0;
-  }
-  
-  .openmenu span:nth-child(2) {
-    top: 10px;
-  }
-  
-  .openmenu span:nth-child(3) {
-    top: 20px;
-  }
-  
+}
 
-@media(max-width:1100px) {
-    .site-header,.inner-header{
+.openmenu span:nth-child(1) {
+    top: 0;
+}
+
+.openmenu span:nth-child(2) {
+    top: 10px;
+}
+
+.openmenu span:nth-child(3) {
+    top: 20px;
+}
+
+@media(max-width: 1100px) {
+    .site-header, .inner-header {
         height: 80px;
     }
 }
 
-/*carousel*/
-
+/* Carousel */
 .carousel {
     position: relative;
     width: 100%;
@@ -88,17 +85,51 @@ body {
     border-radius: 10px 10px 0 0;
 }
 
+/* Define the keyframes animation */
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(10%); /* Adjust this value to control how much the caption extends outside */
+        opacity: 1;
+    }
+}
 
+/* Apply the animation to the carousel-caption */
 .carousel-caption {
     position: absolute;
-    margin-bottom: 200px;
-    bottom: 20px;
-    /* left: 20px; */
+    bottom: 23rem;
+    left: 7rem !important;
     color: white;
+    z-index: 1;
     background-color: #124cd2;
-    padding: 15px;
-    /* border-radius: 5px; */
+    padding: 3px;
+    width:30vw; /* Adjust the width to be longer */
+    max-width: none; /* Ensure no max-width restriction */
+    animation: slideInFromLeft 1s ease-out forwards;
 }
+
+.carousel-caption {
+    display: none; /* Hide all captions by default */
+}
+
+.carousel-caption.active {
+    display: block; /* Show only the active caption */
+}
+
+#cap1{
+    margin-left: 12rem;
+}
+#cap2{
+    margin-left: 12rem;
+}
+#cap3{
+    margin-left: 13rem;
+}
+
+
 
 .carousel-control-prev,
 .carousel-control-next {
